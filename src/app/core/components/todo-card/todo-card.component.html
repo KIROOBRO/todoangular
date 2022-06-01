@@ -1,0 +1,10 @@
+<mat-card class="todo-card">
+  <mat-card-title-group>
+    <mat-card-title>{{ cardData.name }}</mat-card-title>
+    <mat-card-subtitle>{{ cardData.description }}</mat-card-subtitle>
+    <mat-icon>{{ cardData.icon }}</mat-icon>
+  </mat-card-title-group>
+  <mat-card-content>
+    <mat-checkbox *ngFor="let todo of cardData.todos" class="checkbox" [(ngModel)]="todo.checked">{{ todo.label }}</mat-checkbox>
+  </mat-card-content>
+</mat-card>
