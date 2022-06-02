@@ -1,5 +1,107 @@
+:host {
+  &.blacked {
+    &::ng-deep {
+      & mat-card {
+        color: #ffffff;
+        background: #282c3b;
+        & mat-card-content {
+          margin-bottom: 8px;
+
+          &::ng-deep mat-checkbox {
+
+            & .mat-checkbox-frame {
+              //border-color: white;
+            }
+
+            &.mat-checkbox-checked {
+              & .mat-checkbox-layout {
+                & .mat-checkbox-inner-container {
+                  & .mat-checkbox-background {
+                    background-color: #565656;
+                  }
+                }
+              }
+            }
+
+            & .mat-ripple-element, .mat-checkbox-persistent-ripple {
+              background: green !important;
+            }
+
+            &.mat-checkbox-checked {
+              .mat-checkbox-label {
+                color: #565656;
+              }
+            }
+
+            & .mat-checkbox-label {
+              //@include font-base(14px, 500, 20px, normal, $lato);
+
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &::ng-deep {
+    & mat-card {
+      & mat-card-content {
+        margin-bottom: 8px;
+
+        &::ng-deep mat-checkbox {
+          & .mat-checkbox .mat-checkbox-inner-container {
+            margin-right: 4px;
+          }
+
+          & .mat-checkbox .mat-checkbox-label {
+            //@include font-base(12px, 500, 16px, normal, $font-family-avenir-next);
+          }
+
+          & .mat-checkbox-frame {
+            //border-color: white;
+          }
+
+          & .mat-checkbox-background, .mat-checkbox-frame {
+            border-radius: 5px;
+          }
+
+          &.mat-checkbox-checked {
+            & .mat-checkbox-layout {
+              & .mat-checkbox-inner-container {
+                & .mat-checkbox-background {
+                  background-color: #282c3b;
+                }
+              }
+            }
+          }
+
+          & .mat-ripple-element, .mat-checkbox-persistent-ripple {
+            background: white !important;
+          }
+
+          &.mat-checkbox-checked {
+            .mat-checkbox-label {
+              color: #565656;
+            }
+          }
+
+          & .mat-checkbox-label {
+            color: #0b0c10;
+          }
+        }
+      }
+    }
+  }
+}
+
 .todo-card {
-  max-width: 400px;
+  width: 400px;
   margin-bottom: 8px;
   border: 1px solid gray;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
 }

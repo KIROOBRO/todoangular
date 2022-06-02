@@ -1,1 +1,3 @@
-<app-todo-card *ngFor="let task of tasksArray" [cardData]="task"></app-todo-card>
+<div class="homepage">
+  <app-todo-card *ngFor="let task of tasksArray; index as idx" [cardData]="task" [class.blacked]="idx % 2 === 0"></app-todo-card>
+</div>

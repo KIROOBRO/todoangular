@@ -1,0 +1,9 @@
+.homepage {
+  width: 100%;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  column-gap: 65px;
+  row-gap: 35px;
+  justify-content: center;
+}

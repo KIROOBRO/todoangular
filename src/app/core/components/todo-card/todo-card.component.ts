@@ -7,9 +7,6 @@ import {ITask} from "../../interfaces/i-task";
   styleUrls: ['./todo-card.component.scss']
 })
 export class TodoCardComponent implements OnInit {
-  public taskName = 'Task Name';
-  public taskCheckboxName = 'Task checkbox name';
-  public checked = false;
 
   @Input() cardData!: ITask;
 

@@ -14,7 +14,6 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.tasksArray = this.taskService.getData();
-    console.log(this.tasksArray)
   }
 
 }

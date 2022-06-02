@@ -12,7 +12,7 @@ export class TaskService {
       isBlack: true,
       todos: [
         {
-          checked: true,
+          checked: false,
           label: 'Помыть кота'
         },
         {
@@ -20,7 +20,7 @@ export class TaskService {
           label: 'Pizdec'
         },
         {
-          checked: true,
+          checked: false,
           label: 'Hlam'
         },
 

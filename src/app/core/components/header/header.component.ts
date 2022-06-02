@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {TaskService} from "../../services/task.service";
+import {ITask} from "../../interfaces/i-task";
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,15 @@ export class HeaderComponent implements OnInit {
   }
 
   public createTask() {
-    console.log(this.todoNameControl.value);
 
+  const newTask: ITask = {
+      name: this.todoNameControl.value,
+      description: 'random',
+      icon: 'accessible',
+      isBlack: false,
+      todos: []
+    };
+
+    this.taskService.addData(newTask);
   }
 }
