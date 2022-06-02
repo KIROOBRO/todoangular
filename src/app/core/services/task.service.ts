@@ -10,6 +10,7 @@ export class TaskService {
       description: 'Random',
       icon: 'accessible',
       isBlack: true,
+      id: 1,
       todos: [
         {
           checked: false,
@@ -31,6 +32,7 @@ export class TaskService {
       description: 'Random',
       icon: 'accessible',
       isBlack: false,
+      id: 2,
       todos: [
         {
           checked: false,
@@ -51,6 +53,11 @@ export class TaskService {
 
   public addData(todoCard: ITask): void {
     this.data.push(todoCard);
+  }
+
+  public getCurrentTask(id: string): ITask {
+    const task = this.data.find(task => task.id === +id);
+    return task as ITask
   }
 
 }

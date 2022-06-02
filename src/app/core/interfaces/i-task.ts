@@ -3,6 +3,7 @@ export interface ITask {
   description: string;
   icon: string;
   isBlack: boolean;
+  id: number;
   todos: ITodo[];
 }
 

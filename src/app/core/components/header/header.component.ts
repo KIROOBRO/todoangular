@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl} from "@angular/forms";
 import {TaskService} from "../../services/task.service";
 import {ITask} from "../../interfaces/i-task";
@@ -11,7 +11,8 @@ import {ITask} from "../../interfaces/i-task";
 export class HeaderComponent implements OnInit {
   public todoNameControl!: FormControl;
 
-  constructor(private taskService: TaskService) { }
+  constructor(private taskService: TaskService) {
+  }
 
   public ngOnInit(): void {
     this.todoNameControl = new FormControl('');
@@ -19,11 +20,12 @@ export class HeaderComponent implements OnInit {
 
   public createTask() {
 
-  const newTask: ITask = {
+    const newTask: ITask = {
       name: this.todoNameControl.value,
       description: 'random',
       icon: 'accessible',
       isBlack: false,
+      id: 4,
       todos: []
     };
 
