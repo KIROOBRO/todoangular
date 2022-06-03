@@ -1,5 +1,7 @@
 import {Injectable} from "@angular/core";
-import {ITask} from "../interfaces/i-task";
+import {ITask, ITodo} from "../interfaces/i-task";
+import {descriptions} from "../constants/descriptions";
+import {icons} from "../constants/icons";
 
 @Injectable({providedIn: "root"})
 
@@ -9,8 +11,7 @@ export class TaskService {
       name: 'First Task',
       description: 'Random',
       icon: 'accessible',
-      isBlack: true,
-      id: 1,
+      id: '1',
       todos: [
         {
           checked: false,
@@ -29,10 +30,9 @@ export class TaskService {
     },
     {
       name: 'Second Task',
-      description: 'Random',
-      icon: 'accessible',
-      isBlack: false,
-      id: 2,
+      description: this.generatorUniqDesc(),
+      icon: this.generatorUniqIcon(),
+      id: '2',
       todos: [
         {
           checked: false,
@@ -55,9 +55,25 @@ export class TaskService {
     this.data.push(todoCard);
   }
 
+  public addTodo(task: ITask, todo: ITodo): void {
+    task.todos.push(todo);
+  }
+
   public getCurrentTask(id: string): ITask {
-    const task = this.data.find(task => task.id === +id);
+    const task = this.data.find(task => task.id === id);
     return task as ITask
+  }
+
+  public generatorUniqId(): string {
+      return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  }
+
+  public generatorUniqIcon(): string {
+    return icons[Math.floor(Math.random() * (icons.length - 1)) + 1];
+  }
+
+  public generatorUniqDesc(): string {
+    return descriptions[Math.floor(Math.random() * (descriptions.length - 1)) + 1];
   }
 
 }

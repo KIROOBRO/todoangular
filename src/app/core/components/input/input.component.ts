@@ -12,6 +12,7 @@ export class InputComponent implements OnInit {
 
   @Input() formControl: FormControl = new FormControl('');
   @Input() label: string = '';
+  @Input() isBlack = false;
 
   constructor() { }
 

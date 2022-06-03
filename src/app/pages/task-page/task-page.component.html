@@ -1,3 +1,5 @@
 <div class="task-page-container" *ngIf="currentTask">
-  <app-todo-card [cardData]="currentTask"></app-todo-card>
+  <app-todo-card [cardData]="currentTask"
+                 [isBlack]="isBlacked"
+  ></app-todo-card>
 </div>

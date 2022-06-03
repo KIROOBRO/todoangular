@@ -21,9 +21,12 @@ export class HomePageComponent implements OnInit {
     this.tasksArray = this.taskService.getData();
   }
 
-  public openTask(id: number) {
+  public openTask(id: string ,idx: number ) {
     this.router.navigate(['/task-detail', id], {
-      relativeTo: this.activatedRoute
+      relativeTo: this.activatedRoute,
+      queryParams: {
+        cdx: idx
+      }
     });
   }
 

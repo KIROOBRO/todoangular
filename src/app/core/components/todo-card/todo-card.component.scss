@@ -1,16 +1,17 @@
 :host {
-  &.blacked {
+  & .todo-card.blacked {
     &::ng-deep {
-      & mat-card {
         color: #ffffff;
         background: #282c3b;
+      & mat-card-subtitle {
+        color: white;
+      }
         & mat-card-content {
           margin-bottom: 8px;
 
           &::ng-deep mat-checkbox {
 
             & .mat-checkbox-frame {
-              //border-color: white;
             }
 
             &.mat-checkbox-checked {
@@ -34,10 +35,7 @@
             }
 
             & .mat-checkbox-label {
-              //@include font-base(14px, 500, 20px, normal, $lato);
-
               color: white;
-            }
           }
         }
       }

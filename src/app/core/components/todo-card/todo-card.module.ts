@@ -4,7 +4,8 @@ import { TodoCardComponent } from './todo-card.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {InputModule} from "../input/input.module";
 
 
 
@@ -15,12 +16,14 @@ import {FormsModule} from "@angular/forms";
   exports: [
     TodoCardComponent
   ],
-  imports: [
-    CommonModule,
-    MatCardModule,
-    MatIconModule,
-    MatCheckboxModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        MatCardModule,
+        MatIconModule,
+        MatCheckboxModule,
+        FormsModule,
+        InputModule,
+      ReactiveFormsModule
+    ]
 })
 export class TodoCardModule { }

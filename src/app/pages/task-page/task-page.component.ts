@@ -11,6 +11,7 @@ import {ITask} from "../../core/interfaces/i-task";
 export class TaskPageComponent implements OnInit {
   public currentId!: string;
   public currentTask!: ITask;
+  public isBlacked!: boolean
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -19,6 +20,7 @@ export class TaskPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isBlacked = +this.activatedRoute.snapshot.queryParams['cdx'] % 2 === 0;
     this.currentId = this.activatedRoute.snapshot.params['id'];
     this.currentTask = this.taskService.getCurrentTask(this.currentId);
   }

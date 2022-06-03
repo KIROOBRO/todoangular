@@ -2,8 +2,7 @@ export interface ITask {
   name: string;
   description: string;
   icon: string;
-  isBlack: boolean;
-  id: number;
+  id: string;
   todos: ITodo[];
 }
 

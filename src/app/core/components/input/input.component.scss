@@ -1,0 +1,5 @@
+.blacked {
+  &::ng-deep .mat-form-field-label {
+    color: white;
+  }
+}

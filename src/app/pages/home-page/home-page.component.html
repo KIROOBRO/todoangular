@@ -2,7 +2,9 @@
 <div class="homepage">
   <app-todo-card *ngFor="let task of tasksArray; index as idx"
                  [cardData]="task"
-                 [class.blacked]="idx % 2 === 0"
-                 (click)="openTask(task.id)"
-  ></app-todo-card>
+                 [isBlack]="idx % 2 === 0"
+                 (click)="openTask(task.id, idx)"
+                 [showInput]="false"
+  >
+  </app-todo-card>
 </div>

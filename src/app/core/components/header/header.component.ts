@@ -22,10 +22,9 @@ export class HeaderComponent implements OnInit {
 
     const newTask: ITask = {
       name: this.todoNameControl.value,
-      description: 'random',
-      icon: 'accessible',
-      isBlack: false,
-      id: 4,
+      description: this.taskService.generatorUniqDesc(),
+      icon: this.taskService.generatorUniqIcon(),
+      id: this.taskService.generatorUniqId(),
       todos: []
     };
 
