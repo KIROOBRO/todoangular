@@ -15,15 +15,15 @@ export class TaskService {
       todos: [
         {
           checked: false,
-          label: 'Помыть кота'
+          label: 'Clean up the room'
         },
         {
           checked: true,
-          label: 'Pizdec'
+          label: 'Go to the shop'
         },
         {
           checked: false,
-          label: 'Hlam'
+          label: 'Buy a new gift for Alex'
         },
 
       ]
